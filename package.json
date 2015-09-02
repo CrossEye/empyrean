@@ -6,14 +6,20 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
+  "description": "An Algebraic Data Types registry",
   "devDependencies": {
-    "eslint": "~0.21.2",
     "babel": "~5.4.7",
+    "babel-core": "~5.4.7",
     "babel-eslint": "~3.1.9",
-    "babel-core": "~5.4.7"
+    "eslint": "~0.21.2",
+    "tape": "^4.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CrossEye/empyrean.git"
+  },
+
   "scripts": {
     "babelize": "babel src --out-dir compiled",
     "docs": "jsdoc compiled -d docs"

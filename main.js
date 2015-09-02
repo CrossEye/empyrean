@@ -1,6 +1,14 @@
-const set = new Set();
-set.add(1);
-set.add(2);
+import {Semigroup, Monoid, register, concat, empty} from './src/empyrean';
 
-console.log(set.has(1));
-console.log(set.has(3));
+register(Monoid, String, {
+    empty: () => '',
+    concat: (a, b) => a + b
+});
+
+console.log(concat('a', 'b'));
+
+// fold :: Monoid m => m -> [m] -> m
+const combine = (m, elts) => elts.reduce(concat, empty(m));
+
+console.log(combine(['a', 'b', 'c']);
+
